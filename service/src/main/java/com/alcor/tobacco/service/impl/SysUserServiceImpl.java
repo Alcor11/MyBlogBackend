@@ -1,6 +1,7 @@
 package com.alcor.tobacco.service.impl;
 
 import com.alcor.tobacco.domain.SysUser;
+import com.alcor.tobacco.domain.dto.UserRegisterDTO;
 import com.alcor.tobacco.mapper.SysUserMapper;
 import com.alcor.tobacco.service.SysUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
@@ -16,6 +17,10 @@ import org.springframework.stereotype.Service;
 public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser>
     implements SysUserService {
 
+    @Override
+    public long userRegister(UserRegisterDTO userRegisterDTO) {
+        return 0;
+    }
 }
 
 
