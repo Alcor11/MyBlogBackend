@@ -1,9 +1,10 @@
 package com.alcor.tobacco.service.impl;
 
+import com.alcor.tobacco.domain.SysUser;
+import com.alcor.tobacco.mapper.SysUserMapper;
+import com.alcor.tobacco.service.SysUserService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import generator.domain.SysUser;
-import generator.service.SysUserService;
-import generator.mapper.SysUserMapper;
+
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,7 +14,7 @@ import org.springframework.stereotype.Service;
 */
 @Service
 public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser>
-    implements SysUserService{
+    implements SysUserService {
 
 }
 

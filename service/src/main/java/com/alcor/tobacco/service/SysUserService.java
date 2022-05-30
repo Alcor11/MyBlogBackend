@@ -1,6 +1,6 @@
 package com.alcor.tobacco.service;
 
-import generator.domain.SysUser;
+import com.alcor.tobacco.domain.SysUser;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**

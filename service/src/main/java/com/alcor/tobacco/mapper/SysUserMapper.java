@@ -1,6 +1,6 @@
-package mapper;
+package com.alcor.tobacco.mapper;
 
-import generator.domain.SysUser;
+import com.alcor.tobacco.domain.SysUser;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**
