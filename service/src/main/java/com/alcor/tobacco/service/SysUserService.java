@@ -1,7 +1,9 @@
 package com.alcor.tobacco.service;
 
 import com.alcor.tobacco.domain.SysUser;
+import com.alcor.tobacco.domain.dto.UserLoginDTO;
 import com.alcor.tobacco.domain.dto.UserRegisterDTO;
+import com.alcor.tobacco.domain.vo.UserLoginVO;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -12,5 +14,7 @@ import com.baomidou.mybatisplus.extension.service.IService;
 public interface SysUserService extends IService<SysUser> {
 
     long userRegister(UserRegisterDTO userRegisterDTO);
+
+    UserLoginVO userLogin(UserLoginDTO loginDTO);
 
 }

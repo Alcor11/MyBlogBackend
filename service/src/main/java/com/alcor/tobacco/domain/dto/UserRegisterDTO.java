@@ -2,6 +2,10 @@ package com.alcor.tobacco.domain.dto;
 
 import lombok.Data;
 
+import java.io.Serializable;
+
+import static com.alcor.tobacco.constant.UserConstant.*;
+
 /**
  * @author guchun
  * @description 用户注册dto
@@ -9,16 +13,23 @@ import lombok.Data;
  */
 
 @Data
-public class UserRegisterDTO {
+public class UserRegisterDTO implements Serializable{
 
-    private String userAccount;
+    private String username;
 
-    private String userPassword;
+    private String password;
 
     private Integer gender;
 
-    private String userName;
+    private String phone;
 
-    private String userPhone;
+    private Boolean isAdmin;
+
+    public Boolean isValid() {
+        return this.getUsername().length() < USER_ACCOUNT_MIN_SIZE ||
+                this.getUsername().length() > USER_ACCOUNT_MAXSIZE ||
+                this.getPassword().length() > USER_PASSWORD_MAXSIZE ||
+                this.getPassword().length() < USER_PASSWORD_MIN_SIZE;
+    }
 
 }

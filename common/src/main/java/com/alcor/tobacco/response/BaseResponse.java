@@ -1,5 +1,7 @@
 package com.alcor.tobacco.response;
 
+import lombok.Data;
+
 import java.io.Serializable;
 
 /**
@@ -7,6 +9,7 @@ import java.io.Serializable;
  * @description 返回结果类
  * @date 2022/5/30 16:17
  */
+@Data
 public class BaseResponse<T> implements Serializable {
 
     private int code;
