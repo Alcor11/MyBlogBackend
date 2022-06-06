@@ -3,6 +3,7 @@ package com.alcor.tobacco.domain;
 import com.baomidou.mybatisplus.annotation.*;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Date;
 import lombok.Data;
 
@@ -87,17 +88,19 @@ public class SysUser implements Serializable {
     /**
      * 修改密码的时间
      */
-    private Date pwdResetTime;
+    private LocalDateTime pwdResetTime;
 
     /**
      * 创建日期
      */
-    private Date createTime;
+    @TableField(fill = FieldFill.INSERT)
+    private LocalDateTime createTime;
 
     /**
      * 更新时间
      */
-    private Date updateTime;
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private LocalDateTime updateTime;
 
     /**
      * 是否删除
