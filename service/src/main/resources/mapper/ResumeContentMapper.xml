@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.alcor.tobacco.mapper.ResumeContentMapper">
+
+    <resultMap id="BaseResultMap" type="com.alcor.tobacco.domain.ResumeContent">
+            <id property="id" column=" id" jdbcType="INTEGER"/>
+            <result property="resumeContent" column="resume_content" jdbcType="VARCHAR"/>
+            <result property="resumeId" column="resume_id" jdbcType="INTEGER"/>
+            <result property="resumeStatus" column="resume_status" jdbcType="INTEGER"/>
+            <result property="faceExp" column="face_exp" jdbcType="VARCHAR"/>
+            <result property="filePath" column="file_path" jdbcType="VARCHAR"/>
+            <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+            <result property="isDelete" column="is_delete" jdbcType="INTEGER"/>
+    </resultMap>
+
+    <sql id="Base_Column_List">
+         id,resume_content,resume_id,
+        resume_status,face_exp,file_path,
+        create_time,is_delete
+    </sql>
+</mapper>

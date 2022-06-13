@@ -28,4 +28,5 @@ public interface ResumeDocService extends IService<ResumeDoc> {
      */
     int addResumeData(LoginUser loginUser, Resume resume);
 
+
 }

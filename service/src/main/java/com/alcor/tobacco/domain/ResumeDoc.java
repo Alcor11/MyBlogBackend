@@ -50,6 +50,7 @@ public class ResumeDoc implements Serializable {
     /**
      * 
      */
+    @TableLogic
     private String isDelete;
 
     /**

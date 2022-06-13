@@ -10,15 +10,12 @@ import com.alcor.tobacco.mapper.ResumeDocMapper;
 import com.alcor.tobacco.mapstruct.ResumeDocMap;
 import com.alcor.tobacco.service.ResumeDocService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.api.R;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
 * @author guchun
@@ -57,7 +54,6 @@ public class ResumeDocServiceImpl extends ServiceImpl<ResumeDocMapper, ResumeDoc
         }
         return 1;
     }
-
 
 }
 

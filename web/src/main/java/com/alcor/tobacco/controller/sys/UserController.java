@@ -1,5 +1,6 @@
 package com.alcor.tobacco.controller.sys;
 
+import com.alcor.tobacco.aspectlj.config.TokenVerify;
 import com.alcor.tobacco.constant.ResCodeEnum;
 import com.alcor.tobacco.controller.BaseController;
 import com.alcor.tobacco.domain.LoginUser;
@@ -62,6 +63,7 @@ public class UserController extends BaseController {
 
 
     @GetMapping("/offline")
+    @TokenVerify
     public BaseResponse offLine(HttpServletRequest httpServletRequest) {
         boolean b = super.offLineUser(httpServletRequest);
         return b ? ResultUtils.success("下线成功") : ResultUtils.success("下线失败或已下线");
