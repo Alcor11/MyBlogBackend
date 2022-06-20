@@ -17,6 +17,7 @@ import org.springframework.util.ObjectUtils;
 import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.Executor;
 
 /**
 * @author guchun
@@ -36,7 +37,6 @@ public class ResumeContentServiceImpl extends ServiceImpl<ResumeContentMapper, R
     @Override
     public int addResumeContentData(ResumeContentVO resumeContentVO) {
         Integer id = resumeContentVO.getResumeId();
-
         ResumeDoc resumeDoc = resumeDocService.getById(id);
         if (ObjectUtils.isEmpty(resumeDoc)) {
             throw new BusinessException(ResCodeEnum.NULL_ERROR, "请求的主词条不存在");

@@ -1,9 +1,12 @@
 package com.alcor.tobacco;
 
 import com.alcor.tobacco.domain.LoginUser;
+import com.alcor.tobacco.domain.ResumeDoc;
 import com.alcor.tobacco.domain.SysUser;
 import com.alcor.tobacco.domain.vo.Resume;
+import com.alcor.tobacco.domain.vo.ResumeContentVO;
 import com.alcor.tobacco.domain.vo.ResumeVo;
+import com.alcor.tobacco.service.ResumeContentService;
 import com.alcor.tobacco.service.ResumeDocService;
 import org.junit.Assert;
 import org.junit.jupiter.api.Test;
@@ -36,11 +39,33 @@ class TobaccoApplicationTests {
         Assert.assertNotNull(resumeListByLoginUser);
     }
 
+    @Test
+    void getResumeDoc() {
+        ResumeDoc byId = docService.getById(3);
+        System.out.println(byId.toString());
+    }
+
 
     @Test
     void deleteTest() {
         boolean b = docService.removeById(1);
         Assert.assertEquals(b, true);
+    }
+
+    @Autowired
+    ResumeContentService contentService;
+
+    @Test
+    void insertContentTest() {
+        ResumeContentVO resumeContentVO = new ResumeContentVO();
+        resumeContentVO.setResumeContent("this is my first commit");
+        resumeContentVO.setResumeId(3);
+        resumeContentVO.setFaceExp("# my exp" +
+                "## test" +
+                "### commit");
+        resumeContentVO.setResumeStatus(1);
+        int i = contentService.addResumeContentData(resumeContentVO);
+        Assert.assertEquals(i, 1);
     }
 
 }
