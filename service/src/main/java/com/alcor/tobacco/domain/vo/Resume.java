@@ -16,6 +16,8 @@ import java.util.Date;
 @NoArgsConstructor
 public class Resume {
 
+    private Long id;
+
     /**
      * 公司名
      */

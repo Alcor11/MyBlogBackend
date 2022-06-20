@@ -17,7 +17,7 @@ public class ResumeContent implements Serializable {
      * 
      */
     @TableId(type = IdType.AUTO)
-    private Integer id;
+    private Long id;
 
     /**
      * 提交内容说明

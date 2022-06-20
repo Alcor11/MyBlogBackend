@@ -1,5 +1,10 @@
 package com.alcor.tobacco.service;
 
+import com.alcor.tobacco.domain.LoginUser;
+import com.alcor.tobacco.domain.vo.ResumeTreeVO;
+
+import java.util.List;
+
 /**
  * @author guchun
  * @description resume对外接口类
@@ -7,4 +12,5 @@ package com.alcor.tobacco.service;
  */
 public interface ResumeService {
 
+    ResumeTreeVO getResumeTree(LoginUser loginUser);
 }

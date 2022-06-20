@@ -13,7 +13,18 @@ import java.util.List;
 */
 public interface ResumeContentService extends IService<ResumeContent> {
 
+    /**
+     * 添加一条投递进展内容
+     * @param resumeContentVO 投递进展vo
+     * @return 是否成功
+     */
     int addResumeContentData(ResumeContentVO resumeContentVO);
 
+    /**
+     * 根据投递编号获得全部进展list
+     * @param id 投递编号
+     * @return list
+     */
     List<ResumeContentVO> getResumeContentListByResumeId(Long id);
+
 }

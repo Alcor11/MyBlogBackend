@@ -39,7 +39,9 @@ public class ResumeDocServiceImpl extends ServiceImpl<ResumeDocMapper, ResumeDoc
         List<ResumeDoc> resumeDocs = mapper.selectList(wrapper);
         List<Resume> resumes = new ArrayList<>();
         for (ResumeDoc o : resumeDocs) {
-            resumes.add(map.doToBo(o));
+            Resume resume = map.doToBo(o);
+            resume.setId(o.getId());
+            resumes.add(resume);
         }
         return new ResumeVo(resumes);
     }
