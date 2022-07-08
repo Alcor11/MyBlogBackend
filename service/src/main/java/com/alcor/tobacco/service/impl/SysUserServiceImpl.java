@@ -70,7 +70,8 @@ public class SysUserServiceImpl extends ServiceImpl<SysUserMapper, SysUser>
     @Override
     public UserLoginVO userLogin(UserLoginDTO loginDTO) {
         QueryWrapper<SysUser> wrapper = new QueryWrapper<>();
-
+        System.out.println(loginDTO.getPassword());
+        System.out.println(loginDTO.getUsername());
         wrapper.eq("username", loginDTO.getUsername());
         wrapper.eq("password", getDigestPassword(loginDTO.getPassword()));
         SysUser sysUser = userMapper.selectOne(wrapper);

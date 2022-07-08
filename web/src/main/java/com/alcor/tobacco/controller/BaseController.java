@@ -23,7 +23,8 @@ public class BaseController {
     TokenService tokenService;
 
     protected LoginUser getLoginUser(HttpServletRequest httpServletRequest) {
-        String token = httpServletRequest.getHeader("token");
+        String token = httpServletRequest.getHeader("Access-Token");
+        System.out.println(token);
         if (!StringUtils.hasText(token)) {
             throw new BusinessException(ResCodeEnum.PARAMS_ERROR, "token不存在");
         }

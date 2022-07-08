@@ -15,8 +15,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.util.ObjectUtils;
 
 import javax.annotation.Resource;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.Executor;
 
 /**
@@ -52,7 +51,6 @@ public class ResumeContentServiceImpl extends ServiceImpl<ResumeContentMapper, R
     @Override
     public List<ResumeContentVO> getResumeContentListByResumeId(Long id) {
         List<ResumeContentVO> ret = new ArrayList<>();
-
         QueryWrapper<ResumeContent> wrapper = new QueryWrapper<>();
         wrapper.eq("resume_id", id);
         List<ResumeContent> list = this.list(wrapper);

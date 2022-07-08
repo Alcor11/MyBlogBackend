@@ -24,6 +24,7 @@ import javax.servlet.http.HttpServletRequest;
  */
 @RestController
 @RequestMapping("/api/auth")
+@CrossOrigin
 public class UserController extends BaseController {
 
     @Resource
