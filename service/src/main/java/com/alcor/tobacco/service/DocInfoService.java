@@ -20,4 +20,5 @@ public interface DocInfoService extends IService<DocInfo> {
      */
     List<DocInfo> queryList(DocInfoQuery query);
 
+
 }
