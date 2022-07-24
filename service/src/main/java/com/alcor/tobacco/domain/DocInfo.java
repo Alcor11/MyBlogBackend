@@ -34,7 +34,7 @@ public class DocInfo implements Serializable {
     /**
      * 内容类型
      */
-    private String desc;
+    private String doc_desc;
 
     /**
      * 唯一编号
@@ -89,7 +89,7 @@ public class DocInfo implements Serializable {
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
             && (this.getTitle() == null ? other.getTitle() == null : this.getTitle().equals(other.getTitle()))
             && (this.getTag() == null ? other.getTag() == null : this.getTag().equals(other.getTag()))
-            && (this.getDesc() == null ? other.getDesc() == null : this.getDesc().equals(other.getDesc()))
+            && (this.getDoc_desc() == null ? other.getDoc_desc() == null : this.getDoc_desc().equals(other.getDoc_desc()))
             && (this.getDocGuid() == null ? other.getDocGuid() == null : this.getDocGuid().equals(other.getDocGuid()))
             && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()))
             && (this.getCreateBy() == null ? other.getCreateBy() == null : this.getCreateBy().equals(other.getCreateBy()))
@@ -106,7 +106,7 @@ public class DocInfo implements Serializable {
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
         result = prime * result + ((getTitle() == null) ? 0 : getTitle().hashCode());
         result = prime * result + ((getTag() == null) ? 0 : getTag().hashCode());
-        result = prime * result + ((getDesc() == null) ? 0 : getDesc().hashCode());
+        result = prime * result + ((getDoc_desc() == null) ? 0 : getDoc_desc().hashCode());
         result = prime * result + ((getDocGuid() == null) ? 0 : getDocGuid().hashCode());
         result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         result = prime * result + ((getCreateBy() == null) ? 0 : getCreateBy().hashCode());
@@ -126,7 +126,7 @@ public class DocInfo implements Serializable {
         sb.append(", id=").append(id);
         sb.append(", title=").append(title);
         sb.append(", tag=").append(tag);
-        sb.append(", desc=").append(desc);
+        sb.append(", desc=").append(doc_desc);
         sb.append(", docGuid=").append(docGuid);
         sb.append(", createTime=").append(createTime);
         sb.append(", createBy=").append(createBy);

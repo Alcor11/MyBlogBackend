@@ -24,4 +24,17 @@
         create_by,update_time,update_by,
         id_delete,is_permit
     </sql>
+    <select id="list" resultType="com.alcor.tobacco.domain.DocInfo">
+        select * from doc_info
+<!--        <if test="ew.customSqlSegment != null and ew.customSqlSegment != ''">-->
+<!--            ${ew.customSqlSegment}-->
+<!--            <include refid="sql_where"/>-->
+<!--        </if>-->
+<!--        <if test="ew.customSqlSegment == null or ew.customSqlSegment == ''">-->
+<!--            <where>-->
+<!--                <include refid="sql_where"/>-->
+<!--            </where>-->
+<!--        </if>-->
+--         ORDER BY check_time desc,item_id DESC
+    </select>
 </mapper>

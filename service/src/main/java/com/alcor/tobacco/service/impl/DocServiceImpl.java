@@ -1,11 +1,10 @@
 package com.alcor.tobacco.service.impl;
 
+import com.alcor.tobacco.domain.DocInfo;
 import com.alcor.tobacco.domain.query.ArticleQuery;
 import com.alcor.tobacco.domain.vo.ArticlesInfoVO;
-import com.alcor.tobacco.service.DocContService;
-import com.alcor.tobacco.service.DocInfoService;
-import com.alcor.tobacco.service.DocTagService;
-import com.alcor.tobacco.service.IDocService;
+import com.alcor.tobacco.service.*;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -22,6 +21,9 @@ public class DocServiceImpl implements IDocService {
     DocInfoService infoService;
 
     @Autowired
+    DocMetaService metaService;
+
+    @Autowired
     DocTagService tagService;
 
     @Autowired
@@ -31,6 +33,7 @@ public class DocServiceImpl implements IDocService {
     public List<ArticlesInfoVO> getArticleInfo(ArticleQuery query) {
 
         // TODO 实现查询文档列表
+        // 从doc_info中查询出article list
 
         return null;
     }

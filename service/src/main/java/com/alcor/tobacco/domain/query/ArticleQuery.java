@@ -1,6 +1,7 @@
 package com.alcor.tobacco.domain.query;
 
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -10,7 +11,8 @@ import java.util.List;
  * @date 2022/7/9 00:55
  */
 @Data
-public class ArticleQuery extends BaseQuery {
+@NoArgsConstructor
+public class ArticleQuery extends BasePageQuery{
 
     private List<String> keywords;
 
@@ -25,8 +27,5 @@ public class ArticleQuery extends BaseQuery {
 
     private int category_id;
 
-    private int pageNum;
-
-    private int pageSize;
 
 }

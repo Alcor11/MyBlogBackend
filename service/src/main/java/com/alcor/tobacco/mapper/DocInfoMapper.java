@@ -1,7 +1,13 @@
 package com.alcor.tobacco.mapper;
 
 import com.alcor.tobacco.domain.DocInfo;
+import com.alcor.tobacco.domain.query.DocInfoQuery;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
+import com.baomidou.mybatisplus.core.toolkit.Constants;
+import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
 * @author guchun
@@ -10,6 +16,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 * @Entity com.alcor.tobacco.domain.DocInfo
 */
 public interface DocInfoMapper extends BaseMapper<DocInfo> {
+
+    List<DocInfo> list(@Param(Constants.WRAPPER) QueryWrapper qw, @Param("query") DocInfoQuery query);
 
 }
 

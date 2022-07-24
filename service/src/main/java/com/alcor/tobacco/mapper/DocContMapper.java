@@ -1,6 +1,6 @@
 package com.alcor.tobacco.mapper;
 
-import generator.domain.DocCont;
+import com.alcor.tobacco.domain.DocCont;
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 
 /**

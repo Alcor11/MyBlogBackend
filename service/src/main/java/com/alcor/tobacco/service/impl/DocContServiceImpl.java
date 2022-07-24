@@ -1,9 +1,9 @@
 package com.alcor.tobacco.service.impl;
 
+import com.alcor.tobacco.domain.DocCont;
+import com.alcor.tobacco.mapper.DocContMapper;
+import com.alcor.tobacco.service.DocContService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import generator.domain.DocCont;
-import generator.service.DocContService;
-import generator.mapper.DocContMapper;
 import org.springframework.stereotype.Service;
 
 /**
@@ -13,7 +13,7 @@ import org.springframework.stereotype.Service;
 */
 @Service
 public class DocContServiceImpl extends ServiceImpl<DocContMapper, DocCont>
-    implements DocContService{
+    implements DocContService {
 
 }
 
