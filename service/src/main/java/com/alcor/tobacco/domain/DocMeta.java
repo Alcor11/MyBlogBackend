@@ -24,7 +24,7 @@ public class DocMeta implements Serializable {
     /**
      * 外连的文档id
      */
-    private Integer docGuid;
+    private String docGuid;
 
     /**
      * 点击数

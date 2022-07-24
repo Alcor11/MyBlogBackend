@@ -13,9 +13,12 @@ import java.util.List;
  */
 
 @Data
-public class ArticlesInfoVO {
+public class DocInfoVO {
 
-    private Long id;
+    /**
+     * 唯一id
+     */
+    private Long docGuid;
 
     /**
      * 标题
@@ -25,12 +28,12 @@ public class ArticlesInfoVO {
     /**
      * 说明
      */
-    private String desc;
+    private String docDesc;
 
     /**
      * 点赞、访问、评论等参数
      */
     private List<Meta> meta;
 
-    private LocalDate create_time;
+    private LocalDate createTime;
 }

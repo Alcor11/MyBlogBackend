@@ -10,4 +10,11 @@ import com.baomidou.mybatisplus.extension.service.IService;
 */
 public interface DocContService extends IService<DocCont> {
 
+    /**
+     * 根据doc guid 获取详情
+     * @param docGuid 文档唯一id
+     * @return 文档详情
+     */
+    DocCont getDocContByGuid(String docGuid);
+
 }

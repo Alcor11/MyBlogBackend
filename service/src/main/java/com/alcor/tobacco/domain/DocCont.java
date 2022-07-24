@@ -23,7 +23,7 @@ public class DocCont implements Serializable {
     /**
      * 同一篇文章的唯一编号
      */
-    private Integer docGuid;
+    private String docGuid;
 
     /**
      * 

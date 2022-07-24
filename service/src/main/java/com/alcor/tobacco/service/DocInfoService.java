@@ -2,6 +2,7 @@ package com.alcor.tobacco.service;
 
 import com.alcor.tobacco.domain.DocInfo;
 import com.alcor.tobacco.domain.query.DocInfoQuery;
+import com.alcor.tobacco.domain.vo.DocInfoVO;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 import java.util.List;
@@ -20,5 +21,6 @@ public interface DocInfoService extends IService<DocInfo> {
      */
     List<DocInfo> queryList(DocInfoQuery query);
 
+    List<DocInfoVO> queryDocVoList(DocInfoQuery query);
 
 }

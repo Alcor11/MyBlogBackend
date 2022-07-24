@@ -1,14 +1,12 @@
 package com.alcor.tobacco;
 
-import com.alcor.tobacco.domain.DocInfo;
-import com.alcor.tobacco.domain.LoginUser;
-import com.alcor.tobacco.domain.ResumeDoc;
-import com.alcor.tobacco.domain.SysUser;
+import com.alcor.tobacco.domain.*;
 import com.alcor.tobacco.domain.query.DocInfoQuery;
 import com.alcor.tobacco.domain.vo.Resume;
 import com.alcor.tobacco.domain.vo.ResumeContentVO;
 import com.alcor.tobacco.domain.vo.ResumeVo;
 import com.alcor.tobacco.mapper.DocInfoMapper;
+import com.alcor.tobacco.service.DocContService;
 import com.alcor.tobacco.service.DocInfoService;
 import com.alcor.tobacco.service.ResumeContentService;
 import com.alcor.tobacco.service.ResumeDocService;
@@ -16,6 +14,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import org.junit.Assert;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -57,6 +56,16 @@ class TobaccoApplicationTests {
             System.out.println(next.toString());
         }
     }
+
+    @Resource
+    DocContService docContService;
+    @Test
+    void queryArticleContTest() {
+        DocCont docContByGuid = docContService.getDocContByGuid("1");
+        Assertions.assertNotNull(docContByGuid);
+        System.out.println(docContByGuid.toString());
+    }
+
 
     @Test
     void contextLoads() {
