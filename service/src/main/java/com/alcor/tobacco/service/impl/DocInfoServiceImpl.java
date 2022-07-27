@@ -1,6 +1,6 @@
 package com.alcor.tobacco.service.impl;
 
-import com.alcor.tobacco.domain.DocInfo;
+import com.alcor.tobacco.domain.entity.DocInfo;
 import com.alcor.tobacco.domain.query.DocInfoQuery;
 import com.alcor.tobacco.domain.vo.DocInfoVO;
 import com.alcor.tobacco.mapper.DocInfoMapper;
@@ -10,7 +10,7 @@ import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
-import org.springframework.beans.factory.annotation.Autowired;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -24,6 +24,7 @@ import java.util.List;
 * @createDate 2022-07-09 00:45:57
 */
 @Service
+@Slf4j
 public class DocInfoServiceImpl extends ServiceImpl<DocInfoMapper, DocInfo>
     implements DocInfoService {
 

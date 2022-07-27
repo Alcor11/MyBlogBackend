@@ -1,6 +1,6 @@
 package com.alcor.tobacco.service;
 
-import com.alcor.tobacco.domain.DocInfo;
+import com.alcor.tobacco.domain.entity.DocInfo;
 import com.alcor.tobacco.domain.query.DocInfoQuery;
 import com.alcor.tobacco.domain.vo.DocInfoVO;
 import com.baomidou.mybatisplus.extension.service.IService;

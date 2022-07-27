@@ -1,13 +1,11 @@
 package com.alcor.tobacco.service.impl;
 
-import com.alcor.tobacco.domain.DocMeta;
+import com.alcor.tobacco.domain.entity.DocMeta;
 import com.alcor.tobacco.mapper.DocMetaMapper;
 import com.alcor.tobacco.service.DocMetaService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 
 import org.springframework.stereotype.Service;
-
-import java.util.Collection;
 
 /**
 * @author guchun

@@ -1,6 +1,6 @@
 package com.alcor.tobacco.controller.doc;
 
-import com.alcor.tobacco.domain.DocCont;
+import com.alcor.tobacco.domain.entity.DocCont;
 import com.alcor.tobacco.domain.query.DocInfoQuery;
 import com.alcor.tobacco.domain.vo.DocInfoVO;
 import com.alcor.tobacco.response.BaseResponse;
@@ -34,7 +34,6 @@ public class DocumentController {
      */
     @PostMapping("/list")
     public BaseResponse<List<DocInfoVO>> getArticlesInfo(@RequestBody DocInfoQuery query) {
-
         List<DocInfoVO> list = docInfoService.queryDocVoList(query);
 
         return ResultUtils.success(list);

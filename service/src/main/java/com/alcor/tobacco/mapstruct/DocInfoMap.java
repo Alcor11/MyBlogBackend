@@ -1,6 +1,6 @@
 package com.alcor.tobacco.mapstruct;
 
-import com.alcor.tobacco.domain.DocInfo;
+import com.alcor.tobacco.domain.entity.DocInfo;
 import com.alcor.tobacco.domain.vo.DocInfoVO;
 import org.mapstruct.Mapper;
 

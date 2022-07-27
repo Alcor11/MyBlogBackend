@@ -1,20 +1,19 @@
-package com.alcor.tobacco.domain;
+package com.alcor.tobacco.domain.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableField;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+
 import java.io.Serializable;
-import java.util.Date;
+import java.time.LocalDateTime;
+
 import lombok.Data;
 
 /**
  * 
- * @TableName doc_info
+ * @TableName doc_tag
  */
-@TableName(value ="doc_info")
+@TableName(value ="doc_tag")
 @Data
-public class DocInfo implements Serializable {
+public class DocTag implements Serializable {
     /**
      * 
      */
@@ -24,28 +23,23 @@ public class DocInfo implements Serializable {
     /**
      * 
      */
-    private String title;
+    private String tagName;
 
     /**
-     * 内容tag
+     * tag等级 0->1->2
      */
-    private String tag;
+    private String tagLevel;
 
     /**
-     * 内容类型
+     * 上级tag，0级为0
      */
-    @TableField(value = "doc_desc")
-    private String docDesc;
-
-    /**
-     * 唯一编号
-     */
-    private String docGuid;
+    private Integer tagPartent;
 
     /**
      * 
      */
-    private Date createTime;
+    @TableField(fill = FieldFill.INSERT)
+    private LocalDateTime createTime;
 
     /**
      * 
@@ -55,7 +49,8 @@ public class DocInfo implements Serializable {
     /**
      * 
      */
-    private Date updateTime;
+    @TableField(fill = FieldFill.INSERT_UPDATE)
+    private LocalDateTime updateTime;
 
     /**
      * 
@@ -65,12 +60,7 @@ public class DocInfo implements Serializable {
     /**
      * 
      */
-    private String idDelete;
-
-    /**
-     * 审核
-     */
-    private String isPermit;
+    private Integer isDelete;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
@@ -86,18 +76,16 @@ public class DocInfo implements Serializable {
         if (getClass() != that.getClass()) {
             return false;
         }
-        DocInfo other = (DocInfo) that;
+        DocTag other = (DocTag) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-            && (this.getTitle() == null ? other.getTitle() == null : this.getTitle().equals(other.getTitle()))
-            && (this.getTag() == null ? other.getTag() == null : this.getTag().equals(other.getTag()))
-            && (this.getDocDesc() == null ? other.getDocDesc() == null : this.getDocDesc().equals(other.getDocDesc()))
-            && (this.getDocGuid() == null ? other.getDocGuid() == null : this.getDocGuid().equals(other.getDocGuid()))
+            && (this.getTagName() == null ? other.getTagName() == null : this.getTagName().equals(other.getTagName()))
+            && (this.getTagLevel() == null ? other.getTagLevel() == null : this.getTagLevel().equals(other.getTagLevel()))
+            && (this.getTagPartent() == null ? other.getTagPartent() == null : this.getTagPartent().equals(other.getTagPartent()))
             && (this.getCreateTime() == null ? other.getCreateTime() == null : this.getCreateTime().equals(other.getCreateTime()))
             && (this.getCreateBy() == null ? other.getCreateBy() == null : this.getCreateBy().equals(other.getCreateBy()))
             && (this.getUpdateTime() == null ? other.getUpdateTime() == null : this.getUpdateTime().equals(other.getUpdateTime()))
             && (this.getUpdateBy() == null ? other.getUpdateBy() == null : this.getUpdateBy().equals(other.getUpdateBy()))
-            && (this.getIdDelete() == null ? other.getIdDelete() == null : this.getIdDelete().equals(other.getIdDelete()))
-            && (this.getIsPermit() == null ? other.getIsPermit() == null : this.getIsPermit().equals(other.getIsPermit()));
+            && (this.getIsDelete() == null ? other.getIsDelete() == null : this.getIsDelete().equals(other.getIsDelete()));
     }
 
     @Override
@@ -105,16 +93,14 @@ public class DocInfo implements Serializable {
         final int prime = 31;
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
-        result = prime * result + ((getTitle() == null) ? 0 : getTitle().hashCode());
-        result = prime * result + ((getTag() == null) ? 0 : getTag().hashCode());
-        result = prime * result + ((getDocDesc() == null) ? 0 : getDocDesc().hashCode());
-        result = prime * result + ((getDocGuid() == null) ? 0 : getDocGuid().hashCode());
+        result = prime * result + ((getTagName() == null) ? 0 : getTagName().hashCode());
+        result = prime * result + ((getTagLevel() == null) ? 0 : getTagLevel().hashCode());
+        result = prime * result + ((getTagPartent() == null) ? 0 : getTagPartent().hashCode());
         result = prime * result + ((getCreateTime() == null) ? 0 : getCreateTime().hashCode());
         result = prime * result + ((getCreateBy() == null) ? 0 : getCreateBy().hashCode());
         result = prime * result + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
         result = prime * result + ((getUpdateBy() == null) ? 0 : getUpdateBy().hashCode());
-        result = prime * result + ((getIdDelete() == null) ? 0 : getIdDelete().hashCode());
-        result = prime * result + ((getIsPermit() == null) ? 0 : getIsPermit().hashCode());
+        result = prime * result + ((getIsDelete() == null) ? 0 : getIsDelete().hashCode());
         return result;
     }
 
@@ -125,16 +111,14 @@ public class DocInfo implements Serializable {
         sb.append(" [");
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
-        sb.append(", title=").append(title);
-        sb.append(", tag=").append(tag);
-        sb.append(", desc=").append(docDesc);
-        sb.append(", docGuid=").append(docGuid);
+        sb.append(", tagName=").append(tagName);
+        sb.append(", tagLevel=").append(tagLevel);
+        sb.append(", tagPartent=").append(tagPartent);
         sb.append(", createTime=").append(createTime);
         sb.append(", createBy=").append(createBy);
         sb.append(", updateTime=").append(updateTime);
         sb.append(", updateBy=").append(updateBy);
-        sb.append(", idDelete=").append(idDelete);
-        sb.append(", isPermit=").append(isPermit);
+        sb.append(", isDelete=").append(isDelete);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

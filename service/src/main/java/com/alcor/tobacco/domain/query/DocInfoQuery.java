@@ -1,7 +1,6 @@
 package com.alcor.tobacco.domain.query;
 
 import com.alcor.tobacco.aspectlj.config.MyQuery;
-import com.alcor.tobacco.domain.DocInfo;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 

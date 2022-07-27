@@ -1,18 +1,14 @@
 package com.alcor.tobacco.service;
 
-import com.alcor.tobacco.domain.DocInfo;
+import com.alcor.tobacco.domain.entity.DocInfo;
 import com.alcor.tobacco.domain.query.DocInfoQuery;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ContextConfiguration;
 
 import javax.annotation.Resource;
 
 import java.util.Iterator;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 /**
  * @author guchun

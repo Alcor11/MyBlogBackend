@@ -1,50 +1,39 @@
-package com.alcor.tobacco.domain;
+package com.alcor.tobacco.domain.entity;
 
 import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import java.io.Serializable;
-import java.util.Date;
 import lombok.Data;
 
 /**
  * 
- * @TableName doc_meta
+ * @TableName doc_cont
  */
-@TableName(value ="doc_meta")
+@TableName(value ="doc_cont")
 @Data
-public class DocMeta implements Serializable {
+public class DocCont implements Serializable {
     /**
-     * key
+     * 
      */
     @TableId(type = IdType.AUTO)
-    private Long id;
+    private Integer id;
 
     /**
-     * 外连的文档id
+     * 同一篇文章的唯一编号
      */
     private String docGuid;
 
     /**
-     * 点击数
+     * 
      */
-    private Long views;
-
-    /**
-     * 评论数
-     */
-    private Long comments;
-
-    /**
-     * 点赞数
-     */
-    private Long likes;
+    private String docClass;
 
     /**
      * 
      */
-    private Date updateTime;
+    private String content;
 
     @TableField(exist = false)
     private static final long serialVersionUID = 1L;
@@ -60,13 +49,11 @@ public class DocMeta implements Serializable {
         if (getClass() != that.getClass()) {
             return false;
         }
-        DocMeta other = (DocMeta) that;
+        DocCont other = (DocCont) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
             && (this.getDocGuid() == null ? other.getDocGuid() == null : this.getDocGuid().equals(other.getDocGuid()))
-            && (this.getViews() == null ? other.getViews() == null : this.getViews().equals(other.getViews()))
-            && (this.getComments() == null ? other.getComments() == null : this.getComments().equals(other.getComments()))
-            && (this.getLikes() == null ? other.getLikes() == null : this.getLikes().equals(other.getLikes()))
-            && (this.getUpdateTime() == null ? other.getUpdateTime() == null : this.getUpdateTime().equals(other.getUpdateTime()));
+            && (this.getDocClass() == null ? other.getDocClass() == null : this.getDocClass().equals(other.getDocClass()))
+            && (this.getContent() == null ? other.getContent() == null : this.getContent().equals(other.getContent()));
     }
 
     @Override
@@ -75,10 +62,8 @@ public class DocMeta implements Serializable {
         int result = 1;
         result = prime * result + ((getId() == null) ? 0 : getId().hashCode());
         result = prime * result + ((getDocGuid() == null) ? 0 : getDocGuid().hashCode());
-        result = prime * result + ((getViews() == null) ? 0 : getViews().hashCode());
-        result = prime * result + ((getComments() == null) ? 0 : getComments().hashCode());
-        result = prime * result + ((getLikes() == null) ? 0 : getLikes().hashCode());
-        result = prime * result + ((getUpdateTime() == null) ? 0 : getUpdateTime().hashCode());
+        result = prime * result + ((getDocClass() == null) ? 0 : getDocClass().hashCode());
+        result = prime * result + ((getContent() == null) ? 0 : getContent().hashCode());
         return result;
     }
 
@@ -90,10 +75,8 @@ public class DocMeta implements Serializable {
         sb.append("Hash = ").append(hashCode());
         sb.append(", id=").append(id);
         sb.append(", docGuid=").append(docGuid);
-        sb.append(", views=").append(views);
-        sb.append(", comments=").append(comments);
-        sb.append(", likes=").append(likes);
-        sb.append(", updateTime=").append(updateTime);
+        sb.append(", docClass=").append(docClass);
+        sb.append(", content=").append(content);
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();

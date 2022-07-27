@@ -1,6 +1,6 @@
 package com.alcor.tobacco.service.impl;
 
-import com.alcor.tobacco.domain.DocCont;
+import com.alcor.tobacco.domain.entity.DocCont;
 import com.alcor.tobacco.mapper.DocContMapper;
 import com.alcor.tobacco.service.DocContService;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;

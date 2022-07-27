@@ -1,6 +1,6 @@
 package com.alcor.tobacco.service.impl;
 
-import com.alcor.tobacco.domain.DocTag;
+import com.alcor.tobacco.domain.entity.DocTag;
 import com.alcor.tobacco.mapper.DocTagMapper;
 import com.alcor.tobacco.service.DocTagService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;

@@ -30,6 +30,8 @@ public class DocInfoVO {
      */
     private String docDesc;
 
+    private String banner;
+
     /**
      * 点赞、访问、评论等参数
      */

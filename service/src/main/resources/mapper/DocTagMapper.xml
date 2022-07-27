@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.alcor.tobacco.mapper.DocTagMapper">
 
-    <resultMap id="BaseResultMap" type="com.alcor.tobacco.domain.DocTag">
+    <resultMap id="BaseResultMap" type="com.alcor.tobacco.domain.entity.DocTag">
             <id property="id" column="id" jdbcType="INTEGER"/>
             <result property="tagName" column="tag_name" jdbcType="VARCHAR"/>
             <result property="tagLevel" column="tag_level" jdbcType="VARCHAR"/>
