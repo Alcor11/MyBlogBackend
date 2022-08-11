@@ -2,6 +2,7 @@ package com.alcor.tobacco.mapstruct;
 
 import com.alcor.tobacco.domain.entity.DocInfo;
 import com.alcor.tobacco.domain.vo.DocInfoVO;
+import com.alcor.tobacco.domain.vo.NewDocVO;
 import org.mapstruct.Mapper;
 
 /**
@@ -13,4 +14,6 @@ import org.mapstruct.Mapper;
 public interface DocInfoMap {
 
     DocInfoVO doToVo(DocInfo docInfo);
+
+    DocInfo ndVoToDo(NewDocVO newDocVO);
 }
